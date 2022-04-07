@@ -1,7 +1,7 @@
 import 'package:team_calendar/models/time.dart';
 
-class SlotCalc {
-  static int timeSlotTimes(TimeSlot timeSlot) {
+class Slot {
+  static int calc(TimeSlot timeSlot) {
     switch (timeSlot) {
       case TimeSlot.oclock:
         return 1;
