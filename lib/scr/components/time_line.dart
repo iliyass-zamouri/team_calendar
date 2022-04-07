@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:team_calendar/configurations/scroll_config.dart';
-import 'package:team_calendar/models/time.dart';
-import 'package:team_calendar/models/time_line_style.dart';
-import 'package:team_calendar/utils/expand_equally.dart';
-import 'package:team_calendar/utils/slot.dart';
+import 'package:team_calendar/scr/configurations/scroll_config.dart';
+import 'package:team_calendar/scr/models/time.dart';
+import 'package:team_calendar/scr/models/time_line_style.dart';
+import 'package:team_calendar/scr/utils/expand_equally.dart';
+import 'package:team_calendar/scr/utils/slot.dart';
 
 class TimeLineComponent extends StatelessWidget {
   final Time startTime;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team_calendar/models/header.dart';
+import 'package:team_calendar/scr/models/header.dart';
 
 class HeaderComponent extends StatelessWidget {
   final Header header;

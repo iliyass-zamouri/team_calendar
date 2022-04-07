@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team_calendar/models/time.dart';
+import 'package:team_calendar/scr/models/time.dart';
 
 class Appointment {
   final String title;

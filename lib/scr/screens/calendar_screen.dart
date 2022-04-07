@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:team_calendar/components/line.dart';
-import 'package:team_calendar/components/time_line.dart';
-import 'package:team_calendar/configurations/scroll_config.dart';
-import 'package:team_calendar/models/line.dart';
-import 'package:team_calendar/models/time.dart';
-import 'package:team_calendar/models/time_line_style.dart';
-import 'package:team_calendar/scroll_engine.dart';
-import 'package:team_calendar/utils/slot.dart';
+import 'package:team_calendar/scr/components/line.dart';
+import 'package:team_calendar/scr/components/time_line.dart';
+import 'package:team_calendar/scr/configurations/scroll_config.dart';
+import 'package:team_calendar/scr/models/line.dart';
+import 'package:team_calendar/scr/models/time.dart';
+import 'package:team_calendar/scr/models/time_line_style.dart';
+import 'package:team_calendar/scr/scroll_engine.dart';
+import 'package:team_calendar/scr/utils/slot.dart';
 
 class TeamCalendar extends StatefulWidget {
   final List<Line> resources;

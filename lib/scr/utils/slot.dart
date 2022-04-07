@@ -1,4 +1,4 @@
-import 'package:team_calendar/models/time.dart';
+import 'package:team_calendar/scr/models/time.dart';
 
 class Slot {
   static int calc(TimeSlot timeSlot) {
