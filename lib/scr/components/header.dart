@@ -3,26 +3,30 @@ import 'package:team_calendar/scr/models/header.dart';
 
 class HeaderComponent extends StatelessWidget {
   final Header header;
-  final String name;
+
+  final double width;
   final double height;
   final Color borderColor;
+  final Color backgroundColor;
 
-  const HeaderComponent(
-      {Key? key,
-      required this.header,
-      required this.name,
-      this.borderColor = const Color(0xFF353433),
-      required this.height})
-      : super(key: key);
+  const HeaderComponent({
+    Key? key,
+    required this.header,
+    required this.height,
+    required this.width,
+    this.backgroundColor = Colors.white,
+    this.borderColor = const Color(0xFF353433),
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+          color: backgroundColor,
           border: Border(
-        bottom: BorderSide(color: borderColor.withOpacity(0.6)),
-      )),
-      width: 200,
+            bottom: BorderSide(color: borderColor.withOpacity(0.6)),
+          )),
+      width: width,
       height: height,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,7 +40,7 @@ class HeaderComponent extends StatelessWidget {
           ),
           const SizedBox(width: 5),
           Text(
-            name,
+            header.title,
             style: const TextStyle(fontWeight: FontWeight.w500),
           ),
         ],

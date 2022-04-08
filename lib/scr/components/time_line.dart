@@ -10,7 +10,8 @@ class TimeLineComponent extends StatelessWidget {
   final Time endTime;
   final TimeSlot timeSlot;
   final TimeLineStyle style;
-  final double timeSlotHeight;
+  final double height;
+  final double width;
 
   final ScrollController scroll;
   const TimeLineComponent(
@@ -18,7 +19,8 @@ class TimeLineComponent extends StatelessWidget {
       required this.startTime,
       this.style = const TimeLineStyle(),
       required this.endTime,
-      required this.timeSlotHeight,
+      required this.height,
+      required this.width,
       required this.timeSlot,
       required this.scroll})
       : super(key: key);
@@ -26,7 +28,7 @@ class TimeLineComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 48,
+      width: width,
       decoration: BoxDecoration(
           color: style.backgroundColor,
           border: Border(
@@ -41,21 +43,19 @@ class TimeLineComponent extends StatelessWidget {
           shrinkWrap: true,
           itemBuilder: (BuildContext context, int index) {
             return Container(
-              margin: EdgeInsets.only(top: index == 0 ? timeSlotHeight - 8 : 0),
-              height: timeSlotHeight * Slot.calc(timeSlot),
+              margin: EdgeInsets.only(top: index == 0 ? height - 8 : 0),
+              height: height * Slot.calc(timeSlot),
+              width: width,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   for (var i = 1; i <= Slot.calc(timeSlot); i++)
-                    Container(
-                      // height: timeSlotHeight - 0.08,
-                      child: Text(
-                        startTime.refactor(i, index),
-                        style: TextStyle(
-                            color: Colors.black.withOpacity(0.6), fontSize: 12),
-                      ),
+                    Text(
+                      startTime.refactor(i, index),
+                      style: TextStyle(
+                          color: Colors.black.withOpacity(0.6), fontSize: 12),
                     )
                 ].expandEqually().toList(),
               ),

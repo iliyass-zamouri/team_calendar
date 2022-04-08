@@ -10,7 +10,7 @@ class Appointment {
   final EdgeInsets margin;
   final VoidCallback onTap;
   final BoxDecoration decoration;
-  final Color backgroundColor;
+  final Color color;
   final TextStyle textStyle;
   final TextStyle subtitleStyle;
 
@@ -23,7 +23,7 @@ class Appointment {
     this.margin = const EdgeInsets.all(0),
     required this.onTap,
     this.decoration = const BoxDecoration(),
-    this.backgroundColor = const Color(0xFF323D6C),
+    this.color = const Color(0xFF323D6C),
     this.textStyle = const TextStyle(
         color: Color(0xFF535353), fontSize: 11, fontWeight: FontWeight.w400),
     this.subtitleStyle =
