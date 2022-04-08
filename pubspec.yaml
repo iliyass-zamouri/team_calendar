@@ -1,5 +1,5 @@
 name: team_calendar
-description: Calendar for resources & appointments.
+description: Calendar for resources & appointments, bidirectional smooth scrolling & always appearing timeline & resource name.
 version: 0.0.1
 homepage:
 
